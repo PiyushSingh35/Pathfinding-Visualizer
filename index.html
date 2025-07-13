@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pathfinding Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1><b>PIYUSH SINGH</b></h1>
-    <h2><i>PIYUSH SINGH</i></h2>
-    <h3><u>PIYUSH SINGH</u></h3>
-    <h1>H<sub>2</sub>O</h1>
-    <h1>C + O<sub>2</sub> = CO<sub>2</sub></h1>
-    <hr>
-    <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-
-    4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnJlZSUyMGltY
-    Wdlc3xlbnwwfHwwfH
-    x8MA%3D%3D" alt="Random image" height="200"> 
-    <script src="script.js"></script>
+ <!-- Navigation Header -->
+<header id="navbar">
+  <div class="nav-title">Pathfinding Visualizer</div>
+  <div class="nav-controls">
+    <select id="algorithm">
+      <option value="dfs">Depth First Search (DFS)</option>
+      <option value="bfs">Breadth First Search (BFS)</option>
+      <option value="dijkstra">Dijkstra's Algorithm</option>
+      <option value="astar">A* Algorithm</option>
+    </select>
+    <button onclick="visualize()">Visualize</button>
+    <button onclick="generateMaze()">Generate Maze</button>
+    <button onclick="clearGrid()">Clear Grid</button>
+  </div>
+</header>
+
+<!-- Grid Container -->
+<div id="grid-container"></div>
+
+<!-- Instruction Card -->
+
+<div id="main-wrapper">
+  <!-- Instruction card comes first in the flex row -->
+  <div id="instruction-card">
+    <h3>Instructions</h3>
+    <p id="instruction-text">Select the starting node from the grid</p>
+  </div>
+
+  <!-- Grid container comes after -->
+  <div id="grid-container"></div>
+</div>
+  <script src="script.js"></script>
 </body>
 </html>
