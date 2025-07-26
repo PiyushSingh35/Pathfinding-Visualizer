@@ -13,12 +13,24 @@ function createGrid() {
       cell.className = 'cell';
       cell.dataset.row = r;
       cell.dataset.col = c;
-      cell.dataset.weight = 1;
+      const randomWeight = Math.floor(Math.random() * 9) + 1;
+      cell.dataset.weight = randomWeight;
+      cell.textContent = randomWeight; // Optional: to display weight
+
       cell.addEventListener('click', () => handleCellClick(cell));
       container.appendChild(cell);
     }
   }
   addHoverEvents(); // 👈 Add hover events after grid is built
+}
+function generateWeights() {
+  document.querySelectorAll('.cell').forEach(cell => {
+    if (!cell.classList.contains('start') && !cell.classList.contains('end')) {
+      const randomWeight = Math.floor(Math.random() * 9) + 1;
+      cell.dataset.weight = randomWeight;
+      cell.textContent = randomWeight; // Optional: to show the weight
+    }
+  });
 }
 
 
