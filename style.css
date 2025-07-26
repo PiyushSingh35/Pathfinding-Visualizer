@@ -89,6 +89,13 @@ button:hover {
   background-color: #ffc107; /* yellow/gold */
   box-shadow: inset 0 0 4px #c69500;
 }
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
